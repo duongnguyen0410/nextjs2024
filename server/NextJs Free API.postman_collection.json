@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "05b9a74c-3a53-43e1-8a52-e099bcf9cfa6",
+		"_postman_id": "89b1ae86-4af4-4863-97e5-7170e33a3509",
 		"name": "NextJs Free API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "3245861"
+		"_exporter_id": "34275179"
 	},
 	"item": [
 		{
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Dư Thanh Được\",\n    \"email\": \"user@gmail.com\",\n    \"password\": \"123123\",\n    \"confirmPassword\": \"123123\"\n}",
+							"raw": "{\r\n    \"name\": \"Nguyen Xuan Duong\",\r\n    \"email\": \"nxduong410@gmail.com\",\r\n    \"password\": \"Duong0412+\",\r\n    \"confirmPassword\": \"Duong0412+\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,11 +39,14 @@
 				{
 					"name": "Login",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"user@gmail.com\",\n    \"password\": \"123123\"\n}",
+							"raw": "{\r\n    \"email\": \"nxduong410@gmail.com\",\r\n    \"password\": \"Duong0412+\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -68,6 +71,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/auth/logout",
 							"host": [
@@ -88,9 +100,28 @@
 			"item": [
 				{
 					"name": "Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}/account/me",
 							"host": [
@@ -111,7 +142,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Duoc Hello\"\n}",
+							"raw": "{\r\n    \"name\": \"Duong Nguyen\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -147,7 +178,7 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": "/Users/duthanhduoc/Downloads/iphone-11-trang-200x200.jpg"
+									"src": "/C:/Users/23124041/Downloads/iphone15.png"
 								}
 							]
 						},
@@ -193,7 +224,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Iphone 13\",\n    \"description\": \"Mô tả cho iphone 13\",\n    \"image\": \"http://localhost:4000/static/bec024f9ea534b7fbf078cb5462b30aa.jpg\",\n    \"price\": 15000000\n}",
+							"raw": "{\r\n    \"name\": \"Iphone 15 Pro Max\",\r\n    \"description\": \"Iphone 15 description\",\r\n    \"image\": \"http://localhost:4000/static/728d603d9d314f82ada2c793e6dac100.png\",\r\n    \"price\": 34000000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -213,18 +244,18 @@
 					"response": []
 				},
 				{
-					"name": "Get product detail",
+					"name": "Product Detail",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{host}}/products/2",
+							"raw": "{{host}}/products/5",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"products",
-								"2"
+								"5"
 							]
 						}
 					},
@@ -237,7 +268,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Chào\",\n    \"price\": 100000000,\n    \"description\": \"123123123\",\n    \"image\": \"http://localhost:4000/static/c4819080a778412a8c715afd0e2ca90f.jpg\"\n}",
+							"raw": "{\r\n    \"name\": \"Hello\",\r\n    \"price\": 100000000,\r\n    \"description\": \"123123123\",\r\n    \"image\": \"http://localhost:4000/static/c4819080a778412a8c715afd0e2ca90f.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -260,37 +291,18 @@
 				{
 					"name": "Delete Product",
 					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{host}}/products/1",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"products",
-								"1"
-							]
-						}
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Test API",
+			"name": "New Request",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/test",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"test"
-					]
-				}
+				"header": []
 			},
 			"response": []
 		}
